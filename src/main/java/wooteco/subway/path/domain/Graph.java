@@ -14,9 +14,6 @@ public class Graph {
     private final DijkstraShortestPath dijkstraShortestPath = new DijkstraShortestPath(graph);
 
     public void initialize(List<Section> sections) {
-        if (graph.edgeSet().size() != 0) {
-            return;
-        }
         for (Section section : sections) {
             Station upStation = section.getUpStation();
             Station downStation = section.getDownStation();

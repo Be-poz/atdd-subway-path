@@ -22,10 +22,10 @@ public class PathService {
         this.stationDao = stationDao;
         this.sectionDao = sectionDao;
         this.graph = new Graph();
+        initializeGraph();
     }
 
     public PathResponse shortestDistancePath(Long source, Long target) {
-        initializeGraph();
         Station sourceStation = stationDao.findById(source);
         Station targetStation = stationDao.findById(target);
 
